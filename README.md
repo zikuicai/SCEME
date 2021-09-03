@@ -1,3 +1,11 @@
+Some modifications:
+
+1. use `docker/Dockerfile` to easily setup the environment 
+1. SIN pretrained models [Dropbox](https://www.dropbox.com/sh/zeu90jxstipabnv/AABd5exXwn65LcrPY8UZQe9fa?dl=0)
+1. SCEME pretrained autoencoders [G-drive](https://drive.google.com/file/d/15BwgzP0sImv955mym1MQsRICGgY4n2MD/view?usp=sharing), and put them under `detect_attacks` 
+
+---
+
 This repository holds the codes used in [Connecting the Dots: Detecting Adversarial Perturbations Using Context Inconsistency, ECCV 2020](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123680392.pdf).
 
 ## Key Dependencies
@@ -111,15 +119,15 @@ The AutoEncoder is trained and tested with PyTorch
 ```
 cd detect_attacks
 python run_training_testing.py --mode 'train'
-
 ```
 ### Test the reconstruction error on both benign and perturbed context profiles.
 ```
 python run_training_testing.py --mode 'test'
 ```
 ### Calculate the ROC-AUC.
+```
 python test_ROC-AUC.py
-
+```
 
 ### References
 
